@@ -43,6 +43,12 @@ const login = async (req, res = response) => {
   }
 };
 
+const validate = async (req, res = response) => {
+  const authUser = req.authUser;
+  return res.json({ user: authUser });
+};
+
 module.exports = {
   login,
+  validate,
 };
